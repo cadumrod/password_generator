@@ -4,6 +4,7 @@ from time import sleep
 import os
 
 
+# Generate password function
 def generate_pw(length, uppercase=True, lowercase=True, numbers=True, symbols=True):
     characters = ""
 
@@ -27,6 +28,7 @@ def generate_pw(length, uppercase=True, lowercase=True, numbers=True, symbols=Tr
     return pw
 
 
+# Number warning
 def only_num():
     print('\nPor favor, utilize apenas números inteiros.')
     sleep(3)
@@ -36,6 +38,7 @@ def only_num():
         os.system("clear")
 
 
+# User choice condition
 def get_user_choice(prompt):
     while True:
         choice = input(prompt + " (s/n): ").lower()
@@ -51,6 +54,7 @@ def get_user_choice(prompt):
             print("*"*20, "GERADOR DE SENHAS", "*"*20, "\n")
 
 
+# Main function
 def main():
     while True:
         if os.name == "nt":
